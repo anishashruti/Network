@@ -1,0 +1,22 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block content%}
+    <h2>{{ msg }}</h2>
+    {% for post in posts%}
+    <article class="media content-section">
+      <img src="{{ post.authour.profile.image.url }}" class="rounded-circle article-img">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="{% url 'user-post' post.authour.username%}">{{ post.authour }}</a>
+            <small class="text-muted">{{ post.date|date:"F d ,Y" }}</small>
+          </div>
+          <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+          <p class="article-content">{{ post.content }}</p>
+          <div>
+            <a>{{ post.likes.count }}  </a>
+           <a href="{{ post.get_like_url }}"><img src="{% static "images/heart.png" %}"  height="20"></a>
+        </div>
+        </div>
+      </article>
+    {% endfor %}
+{% endblock content %}
