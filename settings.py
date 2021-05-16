@@ -28,7 +28,8 @@ DEBUG_VALUE= os.environ.get('DEBUG_VALUE')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = ['52.86.88.15']
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
