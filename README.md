@@ -58,6 +58,9 @@ This is a web-application similar to twitter where user can:
 #### Unfollow other Profile
 ![Unfollow account](https://github.com/anishashruti/Network/blob/main/ss/unfollow.PNG)
 
+#### View Posts of the account that you follow
+![Unfollow account](https://github.com/anishashruti/Network/blob/main/ss/followers%20post.PNG)
+
 #### View own posts
 ![View own posts](https://github.com/anishashruti/Network/blob/main/ss/view%20post%20by%20user.PNG)
 
