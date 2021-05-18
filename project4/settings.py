@@ -29,7 +29,7 @@ DEBUG_VALUE= os.environ.get('DEBUG_VALUE')
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 # Allow all host headers
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['anishanetwork.herokuapp.com']
 
 
 # Application definition
