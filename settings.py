@@ -26,10 +26,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG_VALUE= os.environ.get('DEBUG_VALUE')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+DEBUG = True
+# (os.environ.get('DEBUG_VALUE') == 'True')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS =[]
+#  ['*']
 
 
 # Application definition

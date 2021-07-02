@@ -1,7 +1,8 @@
 {% extends "network/layout.html" %}
 {% load static %}
 {% block content%}
-    {% for post in posts%}
+{% if user.is_authenticated %}
+{% for post in posts%}
     <article class="media content-section">
       <img src="{{post.authour.profile.image.url}}" class="rounded-circle article-img">
         <div class="media-body">
@@ -38,4 +39,12 @@
       {% endif%}
 
     {% endif%}
+{% else %}
+      <div>
+        <br><br>
+        <h3><a style="text-decoration:none;color:black" href="{% url 'login' %}">Login</a> to an existing account  <br> <br>(or)<br> <br> Create a new account by <a style="text-decoration:none; color:black" href="{% url 'register' %}">Registering</a> as a new user</h3>
+        <h3>to Create and View Blog Post Articles </h3>
+      </div>
+{%endif%}
+    
 {% endblock content %}
